@@ -1,0 +1,153 @@
+.nav {
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  padding: 10px 10px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  transition: background-color 0.1s linear, height 0.2s linear, padding-top 0.2s linear;
+  height: 37px;
+}
+.nav h1 {
+  font-size: 24px;
+}
+.nav i {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  margin-bottom: 50px;
+}
+
+main {
+  position: relative;
+  top: 30px;
+}
+
+.links {
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  overflow: hidden;
+  background-color: #ECF0F1;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  top: 0;
+  bottom: 0;
+  transition: visibility 0.5s linear, opacity 0.5s linear;
+}
+.links svg {
+  position: absolute;
+  right: 10px;
+  top: 3px;
+  width: 15px;
+}
+.links .link-list {
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.links .link-list a {
+  display: block;
+  font-size: 30px;
+  line-height: 80px;
+  text-decoration: none;
+  border: 1px solid #D0D3D4;
+  width: 100%;
+  color: black;
+}
+
+.container {
+  width: 100%;
+}
+.container .portrait {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+.container .portrait img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 10px 50px black;
+}
+.container .about-me {
+  margin: 30px 10px;
+  text-align: justify;
+}
+.container .about-me h2 {
+  margin-bottom: 10px;
+}
+.container .projects {
+  margin: 30px 10px;
+}
+.container .projects .first #first-img-container {
+  display: none;
+}
+.container .projects .second #second-img-container {
+  display: none;
+}
+.container .projects .second #second-img-container img {
+  width: 220px;
+}
+.container .projects .third #third-img-container {
+  display: none;
+}
+.container .projects .project {
+  margin-bottom: 10px;
+}
+.container .projects .project img {
+  margin-bottom: 10px;
+}
+.container .projects h2 {
+  margin-bottom: 10px;
+}
+.container .skills {
+  margin: 30px 10px;
+}
+.container .skills h2 {
+  margin-bottom: 10px;
+}
+.container .skills .icons {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.container .skills .icons i {
+  margin: 10px 20px;
+}
+
+footer {
+  text-align: center;
+  font-size: 17px;
+  margin-top: 80px;
+}
+footer i::before {
+  color: red;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-image: url(../images/wallpaper.jpg);
+  background-size: cover;
+  line-height: 23px;
+}
+
+img {
+  display: block;
+}
+
+/*# sourceMappingURL=main.css.map */

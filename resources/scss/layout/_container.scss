@@ -1,0 +1,82 @@
+.container {
+    width: 100%;
+
+    .portrait {
+        width: 40%;
+        margin: 0 auto;
+        text-align: center;   
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            box-shadow: 0px 10px 50px black;
+        }
+    }
+
+    .about-me {
+        margin: 30px 10px;
+        text-align: justify;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .projects {
+        margin: 30px 10px;
+
+        .first {
+            #first-img-container {
+                display: none;
+            }
+        }
+
+        .second {
+            #second-img-container {
+                display: none;
+
+                img {
+                    width: 220px;
+                }
+            }
+        }
+
+        .third {
+            #third-img-container {
+                display: none;
+            }
+        }
+
+        .project {
+            margin-bottom: 10px;
+
+            img {
+                margin-bottom: 10px;
+            }
+
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    }
+
+    .skills {
+        margin: 30px 10px;
+
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        .icons {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            i {
+                margin: 10px 20px;
+            }
+        }
+    }
+}

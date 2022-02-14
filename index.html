@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <script src="https://kit.fontawesome.com/f353b7bf71.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="resources/css/main.css">
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <h1>Ada Lovelace</h1>
+            <i onclick="changeBgColor()" class="fa fa-bars" ></i>
+        </div>
+        <div class="links">
+            <svg onclick="changeBgColor()" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
+            <div class="link-list">
+                <a onclick="changeBgColor()" href="#about">About Me</a>
+                <a onclick="changeBgColor()" href="#projects">Projects</a>
+                <a onclick="changeBgColor()" href="#skills">Skills</a>
+                <a onclick="changeBgColor()" href="contact.html">Contact</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="portrait">
+                <img src="./resources/images/portrait.jpg" alt="portrait of the author">
+                <caption>Ada Lovelace</caption>
+            </div>
+            <div id="about" class="about-me">
+                <h2>About Me</h2>
+                <p>Hi! I'm Ada, Countess of Lovelace and am an English mathematician and wiriter, chiefly known for my work on Charles Babbage's proposed mechanical general-purpose computer, the Analytical Engine. <br><br>
+                    I am one of the first to recognize that machines  have applications beyond pure calculation, and to have published the first algorithm intended to be carried out by such a machine. <br><br>
+
+                    In my free time I like to read about scientific developments, mathematics and computational mathematics. I also like to take my chances of winning big. <br><br>
+
+                    Fun fact! I've been programming for <span id="coding-seconds"></span> seconds!
+                </p>
+            </div>
+            <div id="projects" class="projects">
+                <h2>Projects</h2>
+                <div class="first project">
+                    <h3 onclick="showFirstImg()"><i class="fas fa-arrow-right fa-sm"></i> The first computer program</h3>
+                    <div id="first-img-container">
+                        <img src="./resources/images/the first computer program.jpg" alt="The first computer program">
+                        <caption>The world's first computer program for coomputing Bernoulli numbers.</caption>
+                    </div>                   
+                </div>
+                <div class="second project">
+                    <h3 onclick="showSecondImg()"><i class="fas fa-arrow-right fa-sm"></i> The Analytical Engine</h3>
+                    <div id="second-img-container">
+                        <img src="resources/images/the analytic engine.webp" alt="The Analytic Engine">
+                        <caption>I helped Charles Babbage on topics ranging from math to computation that helped the development of the Analytical Engine.</caption>
+                    </div>                   
+                </div>
+                <div class="third project">
+                    <h3 onclick="showThirdImg()"><i class="fas fa-arrow-right fa-sm"></i> The Ada programming language</h3>
+                    <div id="third-img-container">
+                        <img src="resources/images/the ada programming language.png" alt="The Analytic Engine">
+                        <caption>My work inspired the United States Department of Defense to name their new programmnig language after me.</caption>
+                    </div>
+                </div>
+                
+                
+            </div>
+            <div id="skills" class="skills">
+                <h2>Skills</h2>
+                <div class="icons">
+                    <i class="fab fa-html5 fa-2x"></i>
+                    <i class="fab fa-css3-alt fa-2x"></i>
+                    <i class="fab fa-js fa-2x"></i>
+                    <i class="fab fa-git-alt fa-2x"></i>
+                    <i class="fab fa-react fa-2x"></i>
+                    <i class="fab fa-aws fa-2x"></i>
+                    <i class="fab fa-chrome fa-2x"></i>
+                    <i class="fab fa-npm fa-2x"></i>
+                    <i class="fab fa-github fa-2x"></i>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Made with <i class="fas fa-heart"></i> in London
+    </footer>
+    <script>
+        //Navbar
+        function changeBgColor() {
+            var link = document.querySelector(".links");
+
+            if (link.style.visibility === "hidden") {
+                link.style.visibility = 'visible';
+                link.style.opacity = "1"
+            } else {
+                link.style.visibility = "hidden";
+                link.style.opacity = "0";
+
+            }
+        }
+
+        window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+            document.querySelector(".nav").style.backgroundColor = "#FAFAFA";
+            document.querySelector(".nav").style.paddingTop = "5px"; 
+            document.querySelector(".nav").style.height = "32px"; 
+            document.querySelector(".nav").style.boxShadow = "0px 1px 10px black";
+            document.querySelector(".nav").style.transition = "box-shadow 0.5s linear"; 
+        } else {
+            document.querySelector(".nav").style.backgroundColor = "transparent";
+            document.querySelector(".nav").style.paddingTop = "10px";
+            document.querySelector(".nav").style.height = "37px"; 
+            document.querySelector(".nav").style.boxShadow = "0px 0px 0px";
+            document.querySelector(".nav").style.transition = "box-shadow 0.1s linear";
+        }
+    }
+
+        //Porgramming seconds
+        const timeContainer = document.getElementById("coding-seconds");
+        const BIRTH_DAY = '01-28-1999';
+        const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+        const intNumberFormat = new Intl.NumberFormat('en-US');
+
+        setInterval(() => {
+            var now = new Date();
+            var difference = Math.floor((
+                now.getTime() - BIRTH_DAY_DATE.getTime()
+            )/1000)
+
+            timeContainer.innerHTML = intNumberFormat.format(difference)
+        })
+        
+        //Projects
+        var firstProject = document.getElementById('first-img-container')
+        var secondProject = document.getElementById('second-img-container')
+        var thirdProject = document.getElementById('third-img-container')
+
+        function showFirstImg() {
+            if (firstProject.style.display === 'none') {
+            firstProject.style.display = 'block';
+            } else {
+                firstProject.style.display = 'none';''
+            }
+        }
+
+        function showSecondImg() {
+            if (secondProject.style.display === 'none') {
+            secondProject.style.display = 'block';
+            } else {
+                secondProject.style.display = 'none';''
+            }
+        }
+
+        function showThirdImg() {
+            if (thirdProject.style.display === 'none') {
+            thirdProject.style.display = 'block';
+            } else {
+                thirdProject.style.display = 'none';''
+            }
+        }
+
+
+    </script>
+</body>
+</html>

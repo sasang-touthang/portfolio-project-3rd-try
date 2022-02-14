@@ -1,0 +1,74 @@
+@import '../helpers/variables';
+
+.nav {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    padding: 10px 10px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    transition: background-color 0.1s linear, height 0.2s linear, padding-top 0.2s linear;
+    height: 37px;
+    
+    
+
+    h1 {
+        font-size: 24px;
+    }
+
+    i {
+        display: flex;
+        align-items: center;
+    }
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+main {
+    position: relative;
+    top: 30px;
+}
+
+.links {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    overflow: hidden;
+    background-color: $navLinkColor;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    top: 0;
+    bottom: 0;
+    transition: visibility 0.5s linear, opacity 0.5s linear;
+
+    svg {
+        position: absolute;
+        right: 10px;
+        top: 3px;
+        width: 15px;
+    }
+
+    .link-list {
+        width: 80%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        a {
+            display: block;
+            font-size: 30px;
+            line-height: 80px;
+            text-decoration: none;
+            border: 1px solid #D0D3D4;
+            width: 100%;
+            color: black;
+        }
+    }
+}
